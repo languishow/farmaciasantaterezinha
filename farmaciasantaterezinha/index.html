@@ -1,0 +1,287 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Farmácia Santa Terezinha </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <style>
+            :root {
+                --color-primary-blue: #1C3E8A;
+                --color-secondary-red: #E0302E; 
+                --color-light-bg: #F8F8F8; 
+                --color-text-dark: #333333;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: var(--color-light-bg);
+                color: var(--color-text-dark);
+            }
+
+            .text-primary-blue { color: var(--color-primary-blue); }
+            .bg-primary-blue { background-color: var(--color-primary-blue); }
+            .bg-secondary-red { background-color: var(--color-secondary-red); }
+
+            .form-input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                transition: border-color 0.3s;
+            }
+
+            .form-input:focus {
+                border-color: var(--color-secondary-red);
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(224, 48, 46, 0.2);
+            }
+
+            .product-card {
+                background: white;
+                border-radius: 12px;
+                padding: 16px;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .product-card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            }
+
+            .product-card img {
+                width: 100%;
+                max-height: 150px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+            <header class="bg-white shadow-md py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <img src="img/farmácia.png" 
+                class="h-20 md:h-32 lg:h-44">
+
+            <nav class="flex flex-wrap justify-center gap-4 font-semibold text-primary-blue text-sm md:text-base">
+                <a href="#home" class="hover:text-secondary-red">Home</a>
+                <a href="#sobre" class="hover:text-secondary-red">Sobre</a>
+                <a href="#servicos" class="hover:text-secondary-red">Serviços</a>
+                <a href="#produtos" class="hover:text-secondary-red">Produtos</a>
+                <a href="#contato" class="hover:text-secondary-red">Contato</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+        <section id="home" class="bg-primary-blue text-white py-20 text-center">
+            <h1 class="text-5xl font-bold mb-4">Farmácia Santa Terezinha</h1>
+            <p class="text-xl mb-8">Cuidando bem da sua saúde há mais de 2 anos</p>
+            <a href="#contato" class="bg-secondary-red hover:bg-red-700 py-3 px-8 rounded-full text-lg font-bold">Fale Conosco</a>
+        </section>
+
+        <section id="sobre" class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-primary-blue mb-8">Quem Somos</h2>
+                <p class="max-w-3xl text-lg mx-auto">
+                    Há 2 anos no mercado oferecendo medicamentos, perfumaria, dermocosméticos e muito mais.
+                    Prezamos por atendimento humanizado, preços baixos e qualidade em nossos serviços.
+                </p>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-16 bg-light-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">Nossos Serviços</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Medicamentos</h3>
+                        <p>Genéricos, referência e controlados.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Perfumaria</h3>
+                        <p>Produtos para beleza e higiene pessoal.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Aplicação de Injetáveis</h3>
+                        <p>Aplicação feita por farmacêuticos habilitados.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Pressão e Glicemia</h3>
+                        <p>Medição rápida e segura.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Orientação Farmacêutica</h3>
+                        <p>Esclareça suas dúvidas sobre medicamentos.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-3">Delivery</h3>
+                        <p>Entrega rápida no conforto da sua casa.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">Produtos em Destaque</h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+
+                    <div class="product-card">
+                        <img src="img/dorflex.jpg" alt="">
+                        <span class="font-semibold text-sm">Dorflex</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/amoxicilina.jpg" alt="">
+                        <span class="font-semibold text-sm">Amoxicilina</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/quetiapina.jpg" alt="">
+                        <span class="font-semibold text-sm">Quetiapina</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/efervescentes.png" alt="">
+                        <span class="font-semibold text-sm">Efervescentes</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/metformina.jpg" alt="">
+                        <span class="font-semibold text-sm">Metformina</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/nimesulida.jpg" alt="">
+                        <span class="font-semibold text-sm">Nimesulida</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/ibuprofeno.jpg" alt="">
+                        <span class="font-semibold text-sm">Ibuprofeno</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/diclofenaco.jpg" alt="">
+                        <span class="font-semibold text-sm">Diclofenaco</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/losartana.jpg" alt="">
+                        <span class="font-semibold text-sm">Losartana</span>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="img/hidroclorotiazida.jpg" alt="">
+                        <span class="font-semibold text-sm">Hidroclorotiazida</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 bg-light-bg">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">Fale Conosco</h2>
+
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-xl border-t-4 border-secondary-red">
+                    <form id="contactForm" class="space-y-6">
+
+                        <div>
+                            <label class="font-medium">Nome Completo:</label>
+                            <input type="text" id="nome" class="form-input" required>
+                        </div>
+
+                        <div>
+                            <label class="font-medium">E-mail:</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+
+                        <div>
+                            <label class="font-medium">Assunto:</label>
+                            <select id="assunto" class="form-input">
+                                <option value="duvida">Dúvida Geral</option>
+                                <option value="pedido">Pedido / Delivery</option>
+                                <option value="farmaceutico">Falar com Farmacêutico</option>
+                                <option value="sugestao">Sugestão / Reclamação</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="font-medium">Mensagem:</label>
+                            <textarea id="mensagem" rows="4" class="form-input" required></textarea>
+                        </div>
+
+                        <div class="flex items-start">
+                            <input type="checkbox" id="newsletter" class="h-4 w-4">
+                            <label class="ml-2">Quero receber promoções por e-mail.</label>
+                        </div>
+
+                        <button id="submitButton" class="w-full bg-secondary-red hover:bg-red-700 text-white py-3 rounded-lg font-bold">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <footer class="bg-white text-primary-blue py-10 text-center">
+
+        <h2 class="text-lg font-bold mb-2">FARMÁCIA SANTA TEREZINHA</h2>
+        <p class="mb-1">📍 Rua Estrada das Barreiras, 9E – São Gonçalo, Salvador–BA</p>
+        <p class="mb-1">📞 Telefone: (71) 99253-2290</p>
+        <p class="mb-1">✉️ E-mail: farmaciasantaterezinha5@gmail.com</p>
+        <p class="mb-1">⏰ Horário: 07h às 20h</p>
+
+    </footer>
+
+    <footer class="bg-primary-blue text-white py-10 text-center">
+
+        <h3 class="text-lg font-bold mb-1">TRABALHO DE DESENVOLVIMENTO DE WEBSITE 2025.2</h3>
+        <p>Daniel Gustavo Almeida Santos</p>
+        <p>Gabriel Ribeiro Cervino Duran</p>
+        <p>Gleidson Bernardo da Paz Cerqueira</p>
+        <p>Samily Santos Dias</p>
+
+        <p class="text-xs opacity-80 mt-4">© 2025 Todos os direitos reservados</p>
+    </footer>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const btn = document.getElementById('submitButton');
+                btn.textContent = 'Mensagem Enviada!';
+                btn.classList.remove('bg-secondary-red');
+                btn.classList.add('bg-green-600');
+
+                setTimeout(() => {
+                    btn.textContent = 'Enviar Mensagem';
+                    btn.classList.remove('bg-green-600');
+                    btn.classList.add('bg-secondary-red');
+                }, 3000);
+
+                this.reset();
+            });
+        </script>
+
+    </body>
+    </html>
